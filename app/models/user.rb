@@ -78,7 +78,7 @@ class User < ApplicationRecord
     notification_timings.liked_event.present?
   end
 
-  def only_woman_attend?(event)
+  def only_woman_attendable?(event)
     !event.only_woman? || (event.only_woman? && woman?)
   end
 end
